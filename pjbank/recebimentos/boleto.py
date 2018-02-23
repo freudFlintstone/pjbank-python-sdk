@@ -8,7 +8,7 @@ class Boleto(Recebimentos):
     def __init__(self, credencial=None, chave=None):
         super(Boleto, self).__init__(credencial, chave)
 
-    def automatico(f):
+    def automatico(self, f):
         def wrapper(self, *args, **kwargs):
             if 'c' in kwargs.keys():
                 self.credencial = kwargs['c']
